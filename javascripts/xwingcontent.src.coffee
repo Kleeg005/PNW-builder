@@ -22488,7 +22488,6 @@ exportObj.randomizer = (faction_name, points) ->
     #for shiplistmaster in shiplistmaster.pilotsbyid.faction == faction_name loop grab pilots by faction
         #if Math.random() >= 0.9
         #append.shiplistmaster.pilotsbyid.xws ? shiplistmaster.pilotsbyid.canonical_name ? shiplistmaster.pilotsbyid.name.canonicalize())
-
 exportObj.hyperspaceShipInclusions = [
     {name: 'X-Wing', faction: 'Rebel Alliance'}
     {name: 'YT-1300', faction: 'Rebel Alliance'}
@@ -22499,8 +22498,9 @@ exportObj.hyperspaceShipInclusions = [
     {name: 'Sheathipede-Class Shuttle', faction: 'Rebel Alliance'}
     {name: 'TIE Advanced', faction: 'Galactic Empire'}
     {name: 'TIE Advanced Prototype', faction: 'Galactic Empire'}
-    {name: 'TIE Fighter', faction: 'Galactic Empire'}
+    {name: 'TIE Fighter', faction: 'Rebel Alliance'}
     {name: 'TIE Interceptor', faction: 'Galactic Empire'}
+    {name: 'TIE Fighter', faction: 'Galactic Empire'}
     {name: 'TIE Reaper', faction: 'Galactic Empire'}
     {name: 'TIE Defender', faction: 'Galactic Empire'}
     {name: 'TIE Striker', faction: 'Galactic Empire'}
@@ -22516,11 +22516,16 @@ exportObj.hyperspaceShipInclusions = [
     {name: 'Escape Craft', faction: 'Scum and Villainy'}
     {name: 'YV-666', faction: 'Scum and Villainy'}
     {name: 'Z-95 Headhunter', faction: 'Scum and Villainy'}
+    {name: 'Z-95 Headhunter', faction: 'Rebel Alliance'}
     {name: 'HWK-290', faction: 'Scum and Villainy'}
+    {name: 'HWK-290', faction: 'Rebel Alliance'}
+    {name: 'U-Wing', faction: 'Rebel Alliance'}
+    {name: 'ARC-170', faction: 'Rebel Alliance'}
     {name: 'Fireball', faction: 'Resistance'}
     {name: 'T-70 X-Wing', faction: 'Resistance'}
     {name: 'RZ-2 A-Wing', faction: 'Resistance'}
     {name: 'BTA-NR2 Y-Wing', faction: 'Resistance'}
+    {name: 'Scavenged YT-1300', faction: 'Resistance'}
     {name: 'Resistance Transport', faction: 'Resistance'}
     {name: 'Resistance Transport Pod', faction: 'Resistance'}
     {name: 'TIE/Ba Interceptor', faction: 'First Order'}
@@ -22539,6 +22544,7 @@ exportObj.hyperspaceShipInclusions = [
     {name: 'Nimbus-class V-Wing', faction: 'Galactic Republic'}
     {name: 'LAAT/i Gunship', faction: 'Galactic Republic'}
     {name: 'Vulture-class Droid Fighter', faction: 'Separatist Alliance'}
+    {name: 'Sith Infiltrator', faction: 'Separatist Alliance'}
     {name: 'Hyena-Class Droid Bomber', faction: 'Separatist Alliance'}
     {name: 'Droid Tri-Fighter', faction: 'Separatist Alliance'}
     {name: 'Firespray-31', faction: 'Separatist Alliance'}
@@ -22552,322 +22558,49 @@ exportObj.hyperspaceShipInclusions = [
 exportObj.hyperspacePilotExclusions = [
 
     # Rebel Alliance
-    'Wedge Antilles'
-    'Biggs Darklighter'
-    'Kullbee Sperado'
-    'Cavern Angels Zealot'
-    'Outer Rim Smuggler'
-    '"Chopper"'
-    'Lothal Rebel'
-    'Fenn Rau (Sheathipede)'
-    'AP-5'
-    'Hera Syndulla (B-Wing)'
-    'Netrem Pollard'
-    'Green Squadron Pilot'
-    'Phoenix Squadron Pilot'
 
     # Galactic Empire
-    'Black Squadron Ace'
-    'Obsidian Squadron Pilot'
-    'Academy Pilot'
-    'Saber Squadron Ace'
-    'Alpha Squadron Pilot'
-    'Scarif Base Pilot'
-    'Grand Inquisitor'
-    'Fifth Brother'
-    'Seventh Sister'
-    'Scarif Base Pilot'
-    'Darth Vader (TIE Defender)'
-    'Colonel Vessery'
-    'Vult Skerris'
-    'Countess Ryad'
-    'Captain Dobbs'
-    'Rexler Brath'
-    '"Rampage"'
-    'Lyttan Dree'
-    '"Duchess"'
-    '"Countdown"'
-    '"Pure Sabacc"'
-    '"Vagabond"'
-    'Darth Vader'
-    'Maarek Stele'
-    'Ved Foslo'
-    'Zertik Strom'
-    'Rear Admiral Chiraneau'
-    'Morna Kee'
-    'Captain Oicunn'
-
 
     # Scum and Villainy
-    'Drea Renthal'
-    'Kavil'
-    'Leema Kai'
-    'Arliz Hadrassian'
-    'Padric'
-    'Hired Gun'
-    'Crymorah Goon'
-    'Boba Fett'
-    'Kath Scarlet'
-    'Emon Azzameen' 
-    'Koshka Frost'
-    'Krassis Trelix'
-    'Skull Squadron Pilot'
-    'Zealous Recruit'
-    'Spice Runner'
-    'Contracted Scout'
-    'Tansarii Point Veteran'
-    'Cartel Spacer'
-    'Mining Guild Surveyor'
-    'Mining Guild Sentry'
-    'Freighter Captain'
-    'Trandoshan Slaver'
-    "N'dru Suhlak"
-    'Bossk (Z-95 Headhunter)'
-    "Kaa'to Leeachos"
-    'Nashtah Pup'
-
+    'Vi Moradi'
 
     # Resistance
-    'Green Squadron Expert'
-    'Blue Squadron Recruit'
-    'Cova Nell'
-    'Pammich Nerro Goode'
-    'Nodin Chavdri'
-    'Kazuda Xiono'
-    'Jarek Yeager'
-    'R1-J5'
-    'Black Squadron Ace (T-70)'
-    'Red Squadron Expert'
-    'Blue Squadron Rookie'
 
     # FO
-    '"Quickdraw"'
-    '"Backdraft"'
-    'Captain Phasma'
-    'Lieutenant LeHuse'
-    'First Order Test Pilot'
-    'Sienar-Jaemus Engineer'
-    'First Order Provocateur'
-    'Omega Squadron Ace'
-    'Zeta Squadron Pilot'
-    'Epsilon Squadron Cadet'
-    'First Order Courier'
 
     # Galactic Republic
-    '"Sinker"'
-    '"Wolffe"'
-    '"Odd Ball" (ARC-170)'
-    '"Jag"'
-    'Shadow Squadron Veteran'
-    'Red Squadron Bomber'
-    'Anakin Skywalker'
-    'Obi-Wan Kenobi'
-    'Mace Windu'
-    'Plo Koon'
-    'Ahsoka Tano'
-    'Luminara Unduli'
-    'Saesee Tiin'
-    'Barriss Offee'
-    'Jedi General'
-    '212th Battalion Pilot'
-    'Bravo Flight Officer'
-    'Blue Squadron Protector'
-    'Gold Squadron Trooper'
-    '"Odd Ball" (V-Wing)'
-    'Wilhuff Tarkin'
-    '"Contrail"'
-    '"Klick"'
 
     # Separatist Alliance
-    'Darth Maul'
-    'Count Dooku'
-    '0-66'
-    'Skakoan Ace'
-    'Feethan Ottraw Autopilot'
     'Phlac-Arphocc Prototype'
-    'DIS-T81'
-    'Fearsome Predator'
-    'DIS-347'
-    'Separatist Racketeer'
-    'Separatist Predator'
-    'Baktoid Drone'
-    'Separatist Bomber'
-    'Techno Union Bomber'
-    'Petranaki Arena Ace'
-    'Stalgasin Hive Guard'
 
 ]
 
 # Upgrades in that are not in Hyperspace
 exportObj.hyperspaceUpgradeExclusions = [
     # Rebel Alliance
-    'Jyn Erso'
-    'Bistan'
-    'Ezra Bridger'
-    '"Chopper" (Astromech)'
-    'Pivot Wing'
-    '"Chopper" (Crew)'
-    '"Zeb" Orrelios'
-    'Baze Malbus'
     'Cassian Andor'
-    'Hera Syndulla'
-    'Jyn Erso'
-    'K-2SO'
-    'Kanan Jarrus'
-    'Lando Calrissian'
-    'Leia Organa'
-    'Magva Yarro'
-    'Maul'
-    'R2-D2 (Crew)'
-    'Sabine Wren'
-    'Saw Gerrera'
-    'Bistan'
-    'Ezra Bridger'
-    'Han Solo'
     'Luke Skywalker'
     'Outrider'
 
     # Galactic Empire
-    'Admiral Sloane'
-    'Ciena Ree'
-    'Director Krennic'
-    'Grand Inquisitor'
-    'Grand Moff Tarkin'
-    'Minister Tua'
-    'Moff Jerjerrod'
-    'Seventh Sister'
-    'ISB Slicer'
-    'Fifth Brother'
-    'ST-321'
 
     # Scum and Villainy
-    '"Genius"'
-    '4-LOM'
-    'Cad Bane'
-    'Cikatro Vizago'
-    'IG-88D'
-    'Chewbacca (Scum)'
-    'Ketsu Onyo'
-    'Lando Calrissian (Scum)'
-    'Maul'
-    'Unkar Plutt'
-    'Zuckuss'
-    'Jabba the Hutt'
-    'Dengar'
-    'Han Solo (Scum)'
-    'Fearless'
-    'Havoc'
-    'Mist Hunter'
-    'Shadow Caster'
-    'Slave I'
-    'Virago'
-    'IG-2000'
 
     # Resistance
-    'M9-G8'
-    'R2-HA'
-    'R5-X3'
-    'BB Astromech'
-    'Chewbacca (Resistance)'
-    'GA-97'
-    'Han Solo (Resistance)'
-    'Kaydel Connix'
-    'Finn'
-    'Paige Tico'
-    'Rey'
-    'Heroic'
-    "Rey's Millennium Falcon"
 
     # FO
-    'Captain Phasma'
-    'General Hux'
-    'Kylo Ren'
-    'Petty Officer Thanisson'
     'Supreme Leader Snoke'
-    'Biohexacrypt Codes'
-    'Hyperspace Tracking Data'
 
     # Galactic Republic
-    'R2-A6'
-    'R2-C4'
-    'R4-P17'
-    'R4-P Astromech'
-    'C1-10P'
-    'Chancellor Palpatine'
-    'Battle Meditation'
-    'Ahsoka Tano'
-    'Clone Commander Cody'
-    'Seventh Fleet Gunner'
 
     # Separatist Alliance
-    'Chancellor Palpatine'
-    'General Grievous'
-    'Discord Missiles'
-    'TA-175'
-    'TV-94'
-    'Ensnare'
 
     # Generic
-    'R5 Astromech'
-    'Autoblasters'
-    'Heavy Laser Cannon'
-    'Jamming Beam'
-    'Informant'
-    'GNK "Gonk" Droid'
-    'Perceptive Copilot'
-    'Tactical Officer'
-    'Brilliant Evasion'
     'Precognitive Reflexes'
-    'Predictive Shot'
     'Sense'
     'Supernatural Reflexes'
-    'Hotshot Gunner'
-    'Veteran Tail Gunner'
-    'Veteran Turret Gunner'
-    'Cloaking Device'
-    'Coaxium Hyperfuel'
-    'Feedback Array'
-    'Inertial Dampeners'
-    'Cluster Missiles'
-    'Cluster Missiles'
-    'Homing Missiles'
-    'Ion Missiles'
-    'Barrage Rockets'
-    'Ablative Plating'
-    'Advanced SLAM'
-    'Afterburners'
-    'Delayed Fuses'
-    'Munitions Failsafe'
-    'Shield Upgrade'
-    'Spare Parts Canisters'
+    'Informant'
     'Static Discharge Vanes'
-    'Stealth Device'
-    'Tactical Scrambler'
-    'Targeting Computer'
-    'Ion Bombs'
-    'Proton Bombs'
-    'Proximity Mines'
-    'Seismic Charges'
-    'Electro-Proton Bomb'
-    'Bomblet Generator'
-    'Advanced Sensors'
-    'Collision Detector'
-    'Trajectory Simulator'
-    'Lone Wolf'
-    'Squad Leader'
-    'Composure'
-    'Crack Shot'
-    'Debris Gambit'
-    'Elusive'
-    'Intimidation'
-    'Marksmanship'
-    'Outmaneuver'
-    'Saturation Salvo'
-    'Swarm Tactics'
-    'Trick Shot'
-    'Advanced Optics'
-    'Pattern Analyzer'
-    'Plasma Torpedoes'
 ]
 
 exportObj.epicExclusionsList = [
